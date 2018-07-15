@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Kid_Movement : MonoBehaviour {
 
@@ -9,11 +10,17 @@ public class Kid_Movement : MonoBehaviour {
     public bool isInAir = true;
 
     private Rigidbody2D rigidbody2d;
+    private Text switchText;
 
+    public bool canDropMermaid = false;
+    public float dropDirection = 0f; // if negative then drop mermaid to right, if positive then drop mermaid to left
 
     // Use this for initialization
     void Start () {
         rigidbody2d = GetComponent<Rigidbody2D>();
+
+        switchText = GameObject.Find("SwitchText").GetComponent<Text>();
+        switchText.enabled = false;
 	}
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -46,6 +53,27 @@ public class Kid_Movement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Ground") {
             isInAir = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "SwitchTrigger") {
+            switchText.enabled = true;
+            Vector2 directionEntered = this.transform.position - collision.transform.position;
+            canDropMermaid = true;
+            // if negative then entered from left, if position then entered from right
+            dropDirection = directionEntered.x;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "SwitchTrigger")
+        {
+            switchText.enabled = false;
+            canDropMermaid = false;
+            dropDirection = 0f;
         }
     }
 }

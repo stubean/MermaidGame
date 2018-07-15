@@ -20,12 +20,22 @@ public class Camera_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // fix camera to character
-        if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
+        // if they stick together, fix camera to character
+        if (!characters_parent.hasDisembarked)
         {
-            this.transform.position = characters_parent.kid.transform.position;
-        } else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid) {
-            this.transform.position = characters_parent.mermaid.transform.position;
+            if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
+            {
+                this.transform.position = characters_parent.kid.transform.position;
+            }
+            else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid)
+            {
+                this.transform.position = characters_parent.mermaid.transform.position;
+            }
+        }
+        else {
+            this.transform.position = (characters_parent.kid.transform.position + characters_parent.mermaid.transform.position)/2;
+
         }
     }
+        
 }

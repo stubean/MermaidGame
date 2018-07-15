@@ -16,6 +16,8 @@ public class Mermaid_Movement : MonoBehaviour {
 
     float moveHorizontal, moveVertical;
 
+    
+
     // Use this for initialization
     void Start () {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -23,7 +25,6 @@ public class Mermaid_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print(isInWater);
         Movement();
     }
 

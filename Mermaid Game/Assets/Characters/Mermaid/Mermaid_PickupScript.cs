@@ -1,31 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mermaid_PickupScript : MonoBehaviour {
 
-    Mermaid_Controller mermaid_Controller;
+    Characters_Parent characterParent;
+    public bool canPickUp = false;
 
-	// Use this for initialization
-	void Start () {
+    private Text pickText;
 
-        mermaid_Controller = transform.parent.GetComponent<Mermaid_Controller>();
+    // Use this for initialization
+    void Start () {
+        characterParent = transform.parent.GetComponent<Characters_Parent>();
 
+        pickText = GameObject.Find("PickText").GetComponent<Text>();
+        pickText.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Kid")
+        if (collision.GetComponent<SwitchTrigger>())
         {
-            mermaid_Controller.canPickupKid = true;
+            SwitchTrigger switchTrigger = collision.GetComponent<SwitchTrigger>();
+            if (switchTrigger.isKidIn) {
+                canPickUp = true;
+                pickText.enabled = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Kid")
+        if (collision.GetComponent<SwitchTrigger>())
         {
-            mermaid_Controller.canPickupKid = false;
+            canPickUp = false;
+            pickText.enabled = false;
         }
     }
 }
