@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Mermaid_Movement : MonoBehaviour {
 
+    /// <summary>
+    /// The code for controlling the mermaids movement
+    /// </summary>
     public bool isInWater = false;
+    public bool isCarryingKid = false;
+    public bool isControlled = true;//CHANGE TO FALSE
     public float movespeed = 5f;
 
     private Rigidbody2D rigidbody2d;
+
+    float moveHorizontal, moveVertical;
 
     // Use this for initialization
     void Start () {
@@ -23,13 +30,39 @@ public class Mermaid_Movement : MonoBehaviour {
     void Movement()
     {
         // get player input
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        if (isControlled)//if the player is focused on the mermaid
+        {
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            moveHorizontal = 0f;
+            moveVertical = 0f;
+        }
 
 
         if (isInWater)
         {
             rigidbody2d.velocity = new Vector2(moveHorizontal * movespeed, moveVertical * movespeed);
+        }
+    }
+
+    /// <summary>
+    /// This turns on and off the mermaid's behavior if they are carrying the kid or not
+    /// </summary>
+    public void ToggleCarryingKid()
+    {
+
+        isCarryingKid = !isCarryingKid;
+
+        if (isCarryingKid)
+        {
+            rigidbody2d.constraints ^= RigidbodyConstraints2D.FreezePositionY;//these are bitwise function. But we basically add or remove the freeze position Y so the mermaid can't go up and down.
+        }
+        else
+        {
+            rigidbody2d.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
     }
 

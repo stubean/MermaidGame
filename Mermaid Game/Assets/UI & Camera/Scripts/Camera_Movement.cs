@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Camera_Movement : MonoBehaviour {
 
+    /// <summary>
+    /// The camera used for both the kid and the mermaid
+    /// </summary>
+
+
     private Characters_Parent characters_parent;
 
     // Use this for initialization
