@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mermaid_Movement : MonoBehaviour {
 
@@ -12,15 +13,19 @@ public class Mermaid_Movement : MonoBehaviour {
     public bool isControlled = true;//CHANGE TO FALSE
     public float movespeed = 5f;
 
+
     private Rigidbody2D rigidbody2d;
+    private Text switchText;
+
+    public bool canDropKid = false;
+    public float dropDirection = 0f; // if negative then drop kid to right, if positive then drop kid to left
 
     float moveHorizontal, moveVertical;
-
-    
 
     // Use this for initialization
     void Start () {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        switchText = GameObject.Find("SwitchText").GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -71,8 +76,18 @@ public class Mermaid_Movement : MonoBehaviour {
     {
         if (collision.tag == "Water") {
             isInWater = true;
-            rigidbody2d.gravityScale = 0.5f;
-        } 
+            rigidbody2d.gravityScale = 0f;
+        }
+
+        if (collision.gameObject.tag == "SwitchTrigger")
+        {
+            switchText.enabled = true;
+            Vector2 directionEntered = this.transform.position - collision.transform.position;
+            canDropKid = true;
+            // if negative then entered from left, if position then entered from right
+            dropDirection = directionEntered.x;
+            print(dropDirection);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -81,6 +96,13 @@ public class Mermaid_Movement : MonoBehaviour {
         {
             isInWater = false;
             rigidbody2d.gravityScale = 1f;
+        }
+
+        if (collision.gameObject.tag == "SwitchTrigger")
+        {
+            switchText.enabled = false;
+            canDropKid = false;
+            dropDirection = 0f;
         }
     }
 }
