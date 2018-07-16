@@ -5,13 +5,16 @@ using UnityEngine;
 public class Mermaid_Controller : MonoBehaviour {
     /// <summary>
     /// The overal controls and statuses for the mermaid, except movement, which is done in the Mermaid_Movement class
+    /// Should only be on the "Mermaid" object
     /// </summary>
 
-
+    GameObject kidObject;
     Mermaid_Movement mermaid_Movement;
 
     //Statuses of the mermaid
     public bool canPickupKid = false;
+    public bool isBeingCarried = false;
+    public bool canDropoffKid = false;
 
 
 
@@ -20,13 +23,14 @@ public class Mermaid_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mermaid_Movement = GetComponent<Mermaid_Movement>();
+        kidObject = GameObject.FindGameObjectWithTag("Kid");
 
     }
 
     //Turns on and off if we are controlling the mermaid
-    public void ToggleMermaidFocus()
+    public void SetFocus(bool IsFocused)
     {
-        mermaid_Movement.isControlled = !mermaid_Movement.isControlled;
+        mermaid_Movement.isFocused = IsFocused;
     }
 	
 	// Update is called once per frame
@@ -36,9 +40,11 @@ public class Mermaid_Controller : MonoBehaviour {
         if(!activateButtonHit && Input.GetAxis("Activate") > 0.1)//if the user has hit the activate button("E")
         {
             activateButtonHit = true;
-            //if (canPickupKid)//only allow to pick up the kid if we can
+            if (canPickupKid)//only allow to pick up the kid if we can
             {
+
                 mermaid_Movement.ToggleCarryingKid();
+                kidObject.SetActive(false);
             }
 
 

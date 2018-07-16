@@ -12,7 +12,8 @@ public class Camera_Movement : MonoBehaviour {
     private Characters_Parent characters_parent;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         GameObject parent = GameObject.Find("Characters_Parent");
         characters_parent = parent.GetComponent<Characters_Parent>();
     }
@@ -20,22 +21,15 @@ public class Camera_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // if they stick together, fix camera to character
-        if (!characters_parent.hasDisembarked)
+        // fix camera to character
+        if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
         {
-            if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
-            {
-                this.transform.position = characters_parent.kid.transform.position;
-            }
-            else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid)
-            {
-                this.transform.position = characters_parent.mermaid.transform.position;
-            }
+            this.transform.position = characters_parent.kid.transform.position;
         }
-        else {
-            this.transform.position = (characters_parent.kid.transform.position + characters_parent.mermaid.transform.position)/2;
-
+        else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid)
+        {
+            this.transform.position = characters_parent.mermaid.transform.position;
         }
     }
-        
+
 }

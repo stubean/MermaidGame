@@ -4,38 +4,36 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Mermaid_PickupScript : MonoBehaviour {
+    /// <summary>
+    /// This script tells the mermaid controller if the kid can be pickedup or not. Should only be used on the mermaid's child object "MermaidPickupRadius"
+    /// </summary>
 
-    Characters_Parent characterParent;
-    public bool canPickUp = false;
 
-    private Text pickText;
+    Mermaid_Controller mermaid_Controller;
 
     // Use this for initialization
-    void Start () {
-        characterParent = transform.parent.GetComponent<Characters_Parent>();
-
-        pickText = GameObject.Find("PickText").GetComponent<Text>();
-        pickText.enabled = false;
+    void Start()
+    {
+        mermaid_Controller = transform.parent.GetComponent<Mermaid_Controller>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<SwitchTrigger>())
+        if (collision.tag == "Kid")
         {
-            SwitchTrigger switchTrigger = collision.GetComponent<SwitchTrigger>();
-            if (switchTrigger.isKidIn) {
-                canPickUp = true;
-                pickText.enabled = true;
-            }
+            mermaid_Controller.canPickupKid = true;
         }
+       /* else if (collision.tag == "Interactable")
+        {
+            mermaid_Controller.Interactable = true;
+        }*/
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<SwitchTrigger>())
+        if (collision.tag == "Kid")
         {
-            canPickUp = false;
-            pickText.enabled = false;
+            mermaid_Controller.canPickupKid = false;
         }
     }
 }

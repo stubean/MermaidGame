@@ -9,7 +9,7 @@ public class Mermaid_Movement : MonoBehaviour {
     /// </summary>
     public bool isInWater = false;
     public bool isCarryingKid = false;
-    public bool isControlled = true;//CHANGE TO FALSE
+    public bool isFocused = false;
     public float movespeed = 5f;
 
     private Rigidbody2D rigidbody2d;
@@ -31,7 +31,7 @@ public class Mermaid_Movement : MonoBehaviour {
     void Movement()
     {
         // get player input
-        if (isControlled)//if the player is focused on the mermaid
+        if (isFocused)//if the player is focused on the mermaid
         {
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
