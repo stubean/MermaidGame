@@ -5,16 +5,28 @@ using UnityEngine.UI;
 
 public class Kid_Movement : MonoBehaviour {
 
+    /// <summary>
+    /// The code for controlling the kids movement
+    /// </summary>
+    /// 
+
+    Kid_Controller kid_Controller;
+
     public float walkspeed = 5f;
     public float jumpspeed = 1f;
     public bool isInAir = true;
-    public bool isFocused = true;//default that the kid is the starting player
+    public bool isCarryingMermaid = false;
 
     private Rigidbody2D rigidbody2d;
 
     float moveHorizontal;
     float moveVertical;
 
+
+    private void Awake()
+    {
+        kid_Controller = GetComponent<Kid_Controller>();
+    }
 
     // Use this for initialization
     void Start()
@@ -33,14 +45,14 @@ public class Kid_Movement : MonoBehaviour {
     {
 
         // If player press space, jump up
-        if (isFocused && Input.GetKeyDown(KeyCode.Space) && isInAir == false)
+        if (kid_Controller.isFocused && Input.GetKeyDown(KeyCode.Space) && isInAir == false)
         {
             rigidbody2d.AddForce(new Vector2(0, jumpspeed), ForceMode2D.Impulse);
             isInAir = true;
         }
 
         // get player input
-        if (isFocused)
+        if (kid_Controller.isFocused)
         {
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
@@ -64,6 +76,17 @@ public class Kid_Movement : MonoBehaviour {
         {
             isInAir = false;
         }
+    }
+
+
+    /// <summary>
+    /// This turns on and off the mermaid's behavior if they are carrying the kid or not
+    /// </summary>
+    public void SetCarryingMermaid(bool IsCarrying)
+    {
+
+        isCarryingMermaid = IsCarrying;
+
     }
 }
 

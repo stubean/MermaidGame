@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_Movement : MonoBehaviour {
+public class Camera_Movement : MonoBehaviour
+{
 
     /// <summary>
     /// The camera used for both the kid and the mermaid
@@ -21,14 +22,22 @@ public class Camera_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // fix camera to character
-        if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
+        // if they stick together, fix camera to character
+        if (characters_parent.someoneCarried)
         {
-            this.transform.position = characters_parent.kid.transform.position;
+            if (characters_parent.characterType == Characters_Parent.CharactersType.Kid)
+            {
+                this.transform.position = characters_parent.kid.transform.position;
+            }
+            else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid)
+            {
+                this.transform.position = characters_parent.mermaid.transform.position;
+            }
         }
-        else if (characters_parent.characterType == Characters_Parent.CharactersType.Mermaid)
+        else
         {
-            this.transform.position = characters_parent.mermaid.transform.position;
+            this.transform.position = (characters_parent.kid.transform.position + characters_parent.mermaid.transform.position) / 2;
+
         }
     }
 

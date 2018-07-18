@@ -8,43 +8,73 @@ public class Mermaid_Controller : MonoBehaviour {
     /// Should only be on the "Mermaid" object
     /// </summary>
 
-    GameObject kidObject;
+    Characters_Parent characters_Parent;
+    Kid_Controller kid_Controller;
     Mermaid_Movement mermaid_Movement;
+    SwitchTrigger currentSwitchTrigger;
+    SpriteRenderer mySpriteRenderer;
+    BoxCollider2D myBoxCollider2D;
+    Rigidbody2D myRigidbody2D;
 
     //Statuses of the mermaid
     public bool canPickupKid = false;
     public bool isBeingCarried = false;
     public bool canDropoffKid = false;
+    public bool carryingKid = false;
+    public bool isFocused = false;
 
 
 
     bool activateButtonHit = false;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
         mermaid_Movement = GetComponent<Mermaid_Movement>();
-        kidObject = GameObject.FindGameObjectWithTag("Kid");
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myBoxCollider2D = GetComponent<BoxCollider2D>();
+        myRigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    // Use this for initialization
+    void Start () {
+        kid_Controller = GameObject.FindGameObjectWithTag("Kid").GetComponent<Kid_Controller>();
+        characters_Parent = GameObject.Find("Characters_Parent").GetComponent<Characters_Parent>();
+
 
     }
 
     //Turns on and off if we are controlling the mermaid
     public void SetFocus(bool IsFocused)
     {
-        mermaid_Movement.isFocused = IsFocused;
+        isFocused = IsFocused;
+
+        /*
+        if(isFocused)//if we aren't focused, we don't want the meriad to keep traveling down. ASK DESIGNERS TO MAKE SURE
+            myRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        else
+            myRigidbody2D.bodyType = RigidbodyType2D.Kinematic;*/
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 
-        if(!activateButtonHit && Input.GetAxis("Activate") > 0.1)//if the user has hit the activate button("E")
+        if(isFocused && !activateButtonHit && Input.GetAxis("Activate") > 0.1)//if the user has hit the activate button("E" or "F"). They are trying to pickup something or activate something
         {
             activateButtonHit = true;
-            if (canPickupKid)//only allow to pick up the kid if we can
+            if (!carryingKid && canPickupKid)//If we can pickup the kid and they aren't already being carried
             {
-
-                mermaid_Movement.ToggleCarryingKid();
-                kidObject.SetActive(false);
+                carryingKid = true;
+                mermaid_Movement.SetCarryingKid(true);
+                kid_Controller.Pickup();
+                characters_Parent.someoneCarried = true;
+            }
+            else if(carryingKid && canDropoffKid)//if the user is tring to drop off the kid
+            {
+                carryingKid = false;
+                mermaid_Movement.SetCarryingKid(false);
+                kid_Controller.DropOff(currentSwitchTrigger);
+                characters_Parent.someoneCarried = false;
             }
 
 
@@ -55,5 +85,81 @@ public class Mermaid_Controller : MonoBehaviour {
             activateButtonHit = false;
         }
 
+    }
+
+
+    /// <summary>
+    /// Change the mermaids's state to be being picked up. Disables box collider and makes the kid invisible
+    /// </summary>
+    public void Pickup()
+    {
+        isFocused = false;//make sure we are not focused
+        isBeingCarried = true;
+        mySpriteRenderer.color = new Color(1, 1, 1, 0);
+        myBoxCollider2D.enabled = false;
+        myRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+    /// <summary>
+    /// Change the mermaids's state to be being dropped off. Enables box collider and makes the kid visible
+    /// </summary>
+    public void DropOff(SwitchTrigger switchTrigger)
+    {
+        isBeingCarried = false;
+        transform.position = switchTrigger.mermaidDropOffPosition;
+        mySpriteRenderer.color = new Color(1, 1, 1, 1);
+        myBoxCollider2D.enabled = true;
+        myRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)//if the mermaid is in the switchTrigger
+    {
+        if (collision.GetComponent<SwitchTrigger>())
+        {
+            currentSwitchTrigger = collision.GetComponent<SwitchTrigger>();
+            if(carryingKid)
+            {
+                canDropoffKid = true;
+            }
+            else if (currentSwitchTrigger.isKidIn)
+            {
+                canPickupKid = true;
+            }
+            else
+            {
+                canPickupKid = false;
+            }
+        }
+
+       
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)//if the mermaid is in the switchTrigger
+    {
+        if (collision.GetComponent<SwitchTrigger>())
+        {
+            if (carryingKid)
+            {
+                canDropoffKid = true;
+            }
+            else if (currentSwitchTrigger.isKidIn)
+            {
+                canPickupKid = true;
+            }
+            else
+            {
+                canPickupKid = false;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)//leaving the dropoff zone
+    {
+        if (collision.GetComponent<SwitchTrigger>())
+        {
+            canDropoffKid = false;
+            canPickupKid = false;
+        }
+        currentSwitchTrigger = null;//remove the reference to the switch trigger the mermaid was using
     }
 }

@@ -14,6 +14,7 @@ public class Characters_Parent : MonoBehaviour
     Kid_Controller kid_Controller;
 
     bool switchActivated = false;
+    public bool someoneCarried = false;
 
     // Use this for initialization
     void Start()

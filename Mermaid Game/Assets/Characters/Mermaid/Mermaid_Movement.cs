@@ -7,16 +7,23 @@ public class Mermaid_Movement : MonoBehaviour {
     /// <summary>
     /// The code for controlling the mermaids movement
     /// </summary>
+    /// 
+
+    Mermaid_Controller mermaid_Controller;
+
     public bool isInWater = false;
     public bool isCarryingKid = false;
-    public bool isFocused = false;
     public float movespeed = 5f;
 
     private Rigidbody2D rigidbody2d;
 
     float moveHorizontal, moveVertical;
 
-    
+
+    private void Awake()
+    {
+        mermaid_Controller = GetComponent<Mermaid_Controller>();
+    }
 
     // Use this for initialization
     void Start () {
@@ -31,7 +38,7 @@ public class Mermaid_Movement : MonoBehaviour {
     void Movement()
     {
         // get player input
-        if (isFocused)//if the player is focused on the mermaid
+        if (mermaid_Controller.isFocused)//if the player is focused on the mermaid
         {
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
@@ -52,10 +59,10 @@ public class Mermaid_Movement : MonoBehaviour {
     /// <summary>
     /// This turns on and off the mermaid's behavior if they are carrying the kid or not
     /// </summary>
-    public void ToggleCarryingKid()
+    public void SetCarryingKid(bool IsCarrying)
     {
 
-        isCarryingKid = !isCarryingKid;
+        isCarryingKid = IsCarrying;
 
         if (isCarryingKid)
         {
