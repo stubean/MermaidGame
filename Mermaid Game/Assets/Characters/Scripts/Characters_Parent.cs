@@ -33,7 +33,7 @@ public class Characters_Parent : MonoBehaviour
     {
 
         // Press G  key to switch between characters and the player isn't holding down the switch key
-        if (!switchActivated && Input.GetAxis("Switch") > 0.1)
+        if (!someoneCarried && !switchActivated && Input.GetAxis("Switch") > 0.1)
         {
             switchActivated = true;
             if (characterType == CharactersType.Kid)//if we are currently the kid, changing into mermaid
