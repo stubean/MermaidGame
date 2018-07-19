@@ -1,31 +1,33 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Mermaid_Movement : MonoBehaviour {
 
     /// <summary>
     /// The code for controlling the mermaids movement
     /// </summary>
+    /// 
+
+    Mermaid_Controller mermaid_Controller;
+
     public bool isInWater = false;
     public bool isCarryingKid = false;
-    public bool isControlled = true;//CHANGE TO FALSE
     public float movespeed = 5f;
 
-
     private Rigidbody2D rigidbody2d;
-    private Text switchText;
-
-    public bool canDropKid = false;
-    public float dropDirection = 0f; // if negative then drop kid to right, if positive then drop kid to left
 
     float moveHorizontal, moveVertical;
+
+
+    private void Awake()
+    {
+        mermaid_Controller = GetComponent<Mermaid_Controller>();
+    }
 
     // Use this for initialization
     void Start () {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        switchText = GameObject.Find("SwitchText").GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -36,7 +38,7 @@ public class Mermaid_Movement : MonoBehaviour {
     void Movement()
     {
         // get player input
-        if (isControlled)//if the player is focused on the mermaid
+        if (mermaid_Controller.isFocused)//if the player is focused on the mermaid
         {
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
@@ -57,10 +59,10 @@ public class Mermaid_Movement : MonoBehaviour {
     /// <summary>
     /// This turns on and off the mermaid's behavior if they are carrying the kid or not
     /// </summary>
-    public void ToggleCarryingKid()
+    public void SetCarryingKid(bool IsCarrying)
     {
 
-        isCarryingKid = !isCarryingKid;
+        isCarryingKid = IsCarrying;
 
         if (isCarryingKid)
         {
@@ -76,18 +78,8 @@ public class Mermaid_Movement : MonoBehaviour {
     {
         if (collision.tag == "Water") {
             isInWater = true;
-            rigidbody2d.gravityScale = 0f;
-        }
-
-        if (collision.gameObject.tag == "SwitchTrigger")
-        {
-            switchText.enabled = true;
-            Vector2 directionEntered = this.transform.position - collision.transform.position;
-            canDropKid = true;
-            // if negative then entered from left, if position then entered from right
-            dropDirection = directionEntered.x;
-            print(dropDirection);
-        }
+            rigidbody2d.gravityScale = 0.5f;
+        } 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -96,13 +88,6 @@ public class Mermaid_Movement : MonoBehaviour {
         {
             isInWater = false;
             rigidbody2d.gravityScale = 1f;
-        }
-
-        if (collision.gameObject.tag == "SwitchTrigger")
-        {
-            switchText.enabled = false;
-            canDropKid = false;
-            dropDirection = 0f;
         }
     }
 }
