@@ -16,6 +16,11 @@ public class Characters_Parent : MonoBehaviour
     bool switchActivated = false;
     public bool someoneCarried = false;
 
+    public GameObject bubble;
+    public GameObject bubbleSpawner;
+    public bool isSpawningBubble = false;
+    public float bubbleSpawningInterval = 5f;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +28,8 @@ public class Characters_Parent : MonoBehaviour
         kid_Controller = kid.GetComponent<Kid_Controller>();
         mermaid = GameObject.Find("Mermaid");
         mermaid_Controller = mermaid.GetComponent<Mermaid_Controller>();
+        bubbleSpawner = GameObject.Find("BubbleSpawner");
+
 
         // set character type to kid at start
         characterType = CharactersType.Kid;
@@ -31,7 +38,6 @@ public class Characters_Parent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // Press G  key to switch between characters and the player isn't holding down the switch key
         if (!someoneCarried && !switchActivated && Input.GetAxis("Switch") > 0.1)
         {
@@ -53,6 +59,21 @@ public class Characters_Parent : MonoBehaviour
         {
             switchActivated = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (characterType == CharactersType.Mermaid && !someoneCarried && !isSpawningBubble)
+            {
+                isSpawningBubble = true;
+                Instantiate(bubble, bubbleSpawner.transform);
+                Invoke("ResetBubbleSpawning", bubbleSpawningInterval);
+            }
+        }
+    }
+
+    public void ResetBubbleSpawning()
+    {
+        isSpawningBubble = false;
     }
 
 
