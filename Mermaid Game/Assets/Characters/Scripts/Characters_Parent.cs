@@ -19,7 +19,7 @@ public class Characters_Parent : MonoBehaviour
     public GameObject bubble;
     public GameObject bubbleSpawner;
     public bool isSpawningBubble = false;
-    public float bubbleSpawningInterval = 5f;
+    public float bubbleSpawningInterval = 1f;
 
     // Use this for initialization
     void Start()
@@ -60,7 +60,7 @@ public class Characters_Parent : MonoBehaviour
             switchActivated = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Mathf.Abs(Input.GetAxis("Power1")) > 0.1)
         {
             if (characterType == CharactersType.Mermaid && !someoneCarried && !isSpawningBubble)
             {

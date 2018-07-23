@@ -22,6 +22,11 @@ public class Kid_Movement : MonoBehaviour {
     float moveHorizontal;
     float moveVertical;
 
+    public Vector3 safePosition;//the location where the kid was last safe
+    float drowningTime = 0.25f;
+    float savePositionTime = 9f;
+    bool savingPosition = false;
+    bool onBubble = false;
 
     private void Awake()
     {
@@ -32,6 +37,7 @@ public class Kid_Movement : MonoBehaviour {
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        SaveKidsPosition();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -64,9 +70,15 @@ public class Kid_Movement : MonoBehaviour {
         }
 
 
-        if (isInAir == false)
+       // if (isInAir == false)
         {
             rigidbody2d.velocity = new Vector2(moveHorizontal * walkspeed, rigidbody2d.velocity.y);
+        }
+
+        if (!isInAir && !savingPosition)
+        {
+            savingPosition = true;
+            Invoke("SaveKidsPosition", savePositionTime);
         }
     }
 
@@ -75,9 +87,63 @@ public class Kid_Movement : MonoBehaviour {
         if (collision.gameObject.tag == "Ground")
         {
             isInAir = false;
+            if (collision.gameObject.name == "Bubble(Clone)")
+                onBubble = true;
+            else
+                onBubble = false;
+        }
+
+      
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isInAir = false;
+            if (collision.gameObject.name == "Bubble(Clone)")
+                onBubble = true;
+            else
+                onBubble = false;
+        }
+
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isInAir = true;
+            onBubble = false;
+        }
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Water")//the kid is drowning
+        {
+            //Invoke("ResetKidFromDrowning", 0f);
+            transform.position = safePosition;
+
         }
     }
 
+    public void ResetKidFromDrowning()
+    {
+       
+    }
+
+    public void SaveKidsPosition()
+    {
+        if (!onBubble)
+        {
+            safePosition = transform.position;
+            savingPosition = false;
+        }
+    }
 
     /// <summary>
     /// This turns on and off the mermaid's behavior if they are carrying the kid or not
