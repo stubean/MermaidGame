@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22457197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24, y: -13, z: 2}
+  m_LocalPosition: {x: 24, y: -15.16, z: 2}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 1197720948}
@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 264685020}
   - component: {fileID: 264685019}
   - component: {fileID: 264685018}
+  - component: {fileID: 264685021}
   m_Layer: 0
   m_Name: Ground (8)
   m_TagString: Ground
@@ -322,7 +323,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -379,6 +380,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264685016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &264685021
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264685016}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &367886332
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +448,7 @@ GameObject:
   - component: {fileID: 369571139}
   - component: {fileID: 369571138}
   - component: {fileID: 369571137}
+  - component: {fileID: 369571140}
   m_Layer: 0
   m_Name: Ground (1)
   m_TagString: Ground
@@ -460,7 +479,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -517,6 +536,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 369571135}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &369571140
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 369571135}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &372262226
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +564,7 @@ GameObject:
   - component: {fileID: 372262230}
   - component: {fileID: 372262229}
   - component: {fileID: 372262228}
+  - component: {fileID: 372262231}
   m_Layer: 0
   m_Name: Ground (4)
   m_TagString: Ground
@@ -558,7 +595,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -615,6 +652,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 372262226}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &372262231
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372262226}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &418109667
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +680,7 @@ GameObject:
   - component: {fileID: 418109671}
   - component: {fileID: 418109670}
   - component: {fileID: 418109669}
+  - component: {fileID: 418109672}
   m_Layer: 0
   m_Name: Ground (7)
   m_TagString: Ground
@@ -656,7 +711,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -713,6 +768,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 418109667}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &418109672
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418109667}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &484802513
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +796,7 @@ GameObject:
   - component: {fileID: 484802516}
   - component: {fileID: 484802515}
   - component: {fileID: 484802514}
+  - component: {fileID: 484802518}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Ground
@@ -741,7 +814,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -811,6 +884,23 @@ Transform:
   m_Father: {fileID: 1197720948}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!252 &484802518
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484802513}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &702124754
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +912,7 @@ GameObject:
   - component: {fileID: 702124758}
   - component: {fileID: 702124757}
   - component: {fileID: 702124756}
+  - component: {fileID: 702124759}
   m_Layer: 0
   m_Name: Ground (10)
   m_TagString: Ground
@@ -852,7 +943,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -909,6 +1000,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702124754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &702124759
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702124754}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &794934627
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +1028,7 @@ GameObject:
   - component: {fileID: 794934631}
   - component: {fileID: 794934630}
   - component: {fileID: 794934629}
+  - component: {fileID: 794934632}
   m_Layer: 0
   m_Name: Ground (5)
   m_TagString: Ground
@@ -950,7 +1059,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1007,6 +1116,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794934627}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &794934632
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794934627}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &833779152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1219,7 @@ GameObject:
   - component: {fileID: 946492062}
   - component: {fileID: 946492061}
   - component: {fileID: 946492060}
+  - component: {fileID: 946492063}
   m_Layer: 0
   m_Name: Ground (6)
   m_TagString: Ground
@@ -1123,7 +1250,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1180,6 +1307,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946492058}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &946492063
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946492058}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &986635684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1335,7 @@ GameObject:
   - component: {fileID: 986635688}
   - component: {fileID: 986635687}
   - component: {fileID: 986635686}
+  - component: {fileID: 986635689}
   m_Layer: 0
   m_Name: Ground (2)
   m_TagString: Ground
@@ -1221,7 +1366,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1278,6 +1423,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 986635684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &986635689
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986635684}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &987973708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1451,7 @@ GameObject:
   - component: {fileID: 987973712}
   - component: {fileID: 987973711}
   - component: {fileID: 987973710}
+  - component: {fileID: 987973713}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Ground
@@ -1319,7 +1482,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1376,6 +1539,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 987973708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &987973713
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987973708}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &1106315867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1661,7 @@ GameObject:
   - component: {fileID: 1162182178}
   - component: {fileID: 1162182177}
   - component: {fileID: 1162182176}
+  - component: {fileID: 1162182179}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Ground
@@ -1511,7 +1692,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1568,6 +1749,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1162182174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1162182179
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162182174}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &1188014198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1843,7 @@ Transform:
   - {fileID: 1488895937}
   - {fileID: 1710477768}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209935803
 GameObject:
@@ -1803,6 +2001,7 @@ GameObject:
   - component: {fileID: 1348119483}
   - component: {fileID: 1348119482}
   - component: {fileID: 1348119481}
+  - component: {fileID: 1348119484}
   m_Layer: 0
   m_Name: Ground (3)
   m_TagString: Ground
@@ -1833,7 +2032,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -1890,6 +2089,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348119479}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1348119484
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348119479}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &1363645546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +2153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.022249907, g: 0.14129055, b: 0.9433962, a: 1}
+  m_Color: {r: 0.022249907, g: 0.14129055, b: 0.9433962, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1976,6 +2192,7 @@ GameObject:
   - component: {fileID: 1412985988}
   - component: {fileID: 1412985987}
   - component: {fileID: 1412985986}
+  - component: {fileID: 1412985989}
   m_Layer: 0
   m_Name: Ground (9)
   m_TagString: Ground
@@ -2006,7 +2223,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2063,6 +2280,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412985984}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1412985989
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412985984}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 1
+  m_UseBounce: 1
 --- !u!1 &1430363547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2308,7 @@ GameObject:
   - component: {fileID: 1430363551}
   - component: {fileID: 1430363550}
   - component: {fileID: 1430363549}
+  - component: {fileID: 1430363552}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Ground
@@ -2104,7 +2339,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2161,6 +2396,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430363547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1430363552
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430363547}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1001 &1488895936
 Prefab:
   m_ObjectHideFlags: 0
@@ -2256,6 +2508,7 @@ GameObject:
   - component: {fileID: 1598627449}
   - component: {fileID: 1598627448}
   - component: {fileID: 1598627447}
+  - component: {fileID: 1598627450}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Ground
@@ -2286,7 +2539,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2343,6 +2596,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1598627445}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1598627450
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598627445}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1001 &1688101394
 Prefab:
   m_ObjectHideFlags: 0
@@ -2513,6 +2783,7 @@ GameObject:
   - component: {fileID: 1737987653}
   - component: {fileID: 1737987652}
   - component: {fileID: 1737987651}
+  - component: {fileID: 1737987654}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Ground
@@ -2543,7 +2814,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2600,6 +2871,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737987649}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!252 &1737987654
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737987649}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &1832680371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2961,7 @@ GameObject:
   - component: {fileID: 1887348127}
   - component: {fileID: 1887348126}
   - component: {fileID: 1887348125}
+  - component: {fileID: 1887348129}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -2690,7 +2979,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2760,6 +3049,23 @@ Transform:
   m_Father: {fileID: 1197720948}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!252 &1887348129
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887348124}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
 --- !u!1 &1894913817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,7 +3166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928002335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 74, y: -13, z: 2}
+  m_LocalPosition: {x: 74, y: -15, z: 2}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 1197720948}
@@ -2970,7 +3276,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4225984458406388, guid: 204ae8cd1b5e82e45b43cea7a61c01ae, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114989163925731304, guid: 204ae8cd1b5e82e45b43cea7a61c01ae,
         type: 2}
@@ -3022,8 +3328,13 @@ Prefab:
         type: 2}
       propertyPath: bubble
       value: 
-      objectReference: {fileID: 1948488540396850, guid: b7b36fc957a3cdb46ac4a2f51a762c9e,
+      objectReference: {fileID: 1251177488563238, guid: 204a2f820737f2a4bb2055785f1cfa02,
         type: 2}
+    - target: {fileID: 114444760948775008, guid: 204ae8cd1b5e82e45b43cea7a61c01ae,
+        type: 2}
+      propertyPath: bubbleSpawningInterval
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204ae8cd1b5e82e45b43cea7a61c01ae, type: 2}
   m_IsPrefabAsset: 0
