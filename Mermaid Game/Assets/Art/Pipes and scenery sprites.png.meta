@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 8ea466332983e23429c97a309ee1b2d0
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Pipes and scenery sprites_0
+    21300002: Pipes and scenery sprites_1
+    21300004: Pipes and scenery sprites_2
+    21300006: Pipes and scenery sprites_3
+    21300008: Pipes and scenery sprites_4
+    21300010: Pipes and scenery sprites_5
+    21300012: Pipes and scenery sprites_6
+    21300014: Pipes and scenery sprites_7
+    21300016: Pipes and scenery sprites_8
+    21300018: Pipes and scenery sprites_9
+    21300020: Pipes and scenery sprites_10
+    21300022: Pipes and scenery sprites_11
+    21300024: Pipes and scenery sprites_12
+    21300026: Pipes and scenery sprites_13
+    21300028: Pipes and scenery sprites_14
+    21300030: Pipes and scenery sprites_15
+    21300032: Pipes and scenery sprites_16
+    21300034: Pipes and scenery sprites_17
+    21300036: Pipes and scenery sprites_18
+    21300038: Pipes and scenery sprites_19
+    21300040: Pipes and scenery sprites_20
+    21300042: Pipes and scenery sprites_21
+    21300044: Pipes and scenery sprites_22
+    21300046: Pipes and scenery sprites_23
+    21300048: Pipes and scenery sprites_24
+    21300050: Pipes and scenery sprites_25
+    21300052: Pipes and scenery sprites_26
+    21300054: Pipes and scenery sprites_27
+    21300056: Pipes and scenery sprites_28
+    21300058: Pipes and scenery sprites_29
+    21300060: Pipes and scenery sprites_30
+    21300062: Pipes and scenery sprites_31
+    21300064: Pipes and scenery sprites_32
+    21300066: Pipes and scenery sprites_33
+    21300068: Pipes and scenery sprites_34
+    21300070: Pipes and scenery sprites_35
+    21300072: Pipes and scenery sprites_36
+    21300074: Pipes and scenery sprites_37
+    21300076: Pipes and scenery sprites_38
+    21300078: Pipes and scenery sprites_39
+    21300080: Pipes and scenery sprites_40
+    21300082: Pipes and scenery sprites_41
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -47,7 +89,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -93,7 +135,827 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 456
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40793c650fa66904ea3a45e27041d18f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 228
+        width: 49
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d13cf6dadf01764eb5a789a9134f72c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 228
+        width: 50
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef37f93a52e9764409be63824682e81c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 228
+        width: 50
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4e85f546b645343a824ff00733997e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 228
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416773527ad9c2b47bec86ad001ff281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 359
+        width: 96
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2301c3fea0d47f64ca4c7cc2c267d92e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_6
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 548
+        width: 42
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e1f81f64a006a4dbc166d95570c5e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_7
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 394
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0de901efe608a84eba2463ef1fc5fe1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 696
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811d57b05c3cc194a900406c53c4b673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 503
+        width: 96
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7fc8963b69b1b488887d624cd965ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 551
+        width: 96
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9323632abc447f942a573f578931cd8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 696
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f8275fc45711f4ca84700e13a56e45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 551
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d361900bab9e246a18dfdfba31cedd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 596
+        width: 41
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1bd150fc30b494f855f5a789d7152f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_14
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 596
+        width: 42
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb39d37bb53f2c47b5dbe926353dcc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_15
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 596
+        width: 42
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b099efdca5597254aba60658541ffa3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_16
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 452
+        width: 44
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af031f1f4e39d9440ba9c1688ea4147a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 452
+        width: 45
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2ebd6ad76429d49989dac970235390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_18
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 403
+        width: 42
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93883166c6cc915458651563e5b575d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_19
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 404
+        width: 42
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dae5c9bb73cf9c41b69fe1f8ab58c0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 388
+        width: 64
+        height: 10
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b03d802f6d077840b75ef8b819f8513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_21
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 388
+        width: 52
+        height: 22
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f227ee780a41548aa3cc114364ff98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_22
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 388
+        width: 61
+        height: 17
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a3cea1b9c24664dbee36433cf0e8ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_23
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 424
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4aece9e461b74478e986295bc8f2a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_24
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 389
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6254e12ae95e10e4e83e2f917bbf5b50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_25
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 596
+        width: 42
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9455c42bbeccce1489adc7ce419117c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_26
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 644
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee18324dfcc7724eb33c319c21699af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_27
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 548
+        width: 42
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ced78c96c612c469ce6c0518694484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_28
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 455
+        width: 93
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72c9ff7df18e1148aa7be4fed4cef5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 455
+        width: 98
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5499e4d2870a448bfbad9637730e58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_30
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 455
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68cc1fda2ed6cc4a801c3868336b337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 695
+        width: 98
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fc16361fe9d694187f85ea360a52d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_32
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 645
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747344c0d0684f14889dba2c3930f501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_33
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 548
+        width: 42
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f032e6764fa96484a89e839b29c229c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_34
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 548
+        width: 42
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0745e82a6f900d04085d9c50bf936000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 695
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbc66fd2a4ce7c47ae6f000f9b3aa6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_36
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 624
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc16316f1b60e1469191d1b74f7083a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_37
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 576
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a679185fd0a18a4cb4dd51f661c3092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 645
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9f3c9489fe8af4e86f3c7b6a2ff9d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 457
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd4c2d7031919e4e8d1bb9dd05db6d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pipes and scenery sprites_41
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 456
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa022c6eeaa248498ce45ee51c77563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
