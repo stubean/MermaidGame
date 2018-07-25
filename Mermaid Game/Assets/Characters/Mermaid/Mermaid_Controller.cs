@@ -199,6 +199,7 @@ public class Mermaid_Controller : MonoBehaviour {
     {
         if (collision.GetComponent<SwitchTrigger>())
         {
+            currentSwitchTrigger = collision.GetComponent<SwitchTrigger>();
             if (carryingKid)
             {
                 canDropoffKid = true;
