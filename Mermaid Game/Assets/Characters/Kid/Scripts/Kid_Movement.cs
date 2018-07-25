@@ -11,6 +11,7 @@ public class Kid_Movement : MonoBehaviour {
     /// 
 
     Kid_Controller kid_Controller;
+    Animator animator;
     SpriteRenderer spriteRenderer;
 
     public float walkspeed = 5f;
@@ -34,6 +35,7 @@ public class Kid_Movement : MonoBehaviour {
     {
         kid_Controller = GetComponent<Kid_Controller>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Use this for initialization
