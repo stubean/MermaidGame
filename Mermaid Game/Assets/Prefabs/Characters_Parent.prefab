@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1727491531019856}
   m_IsPrefabAsset: 1
+--- !u!1 &1599421642255254
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4695002271392830}
+  m_Layer: 0
+  m_Name: BubbleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1727491531019856
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +106,9 @@ Transform:
   m_GameObject: {fileID: 1853685387010178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.96, y: -5.06, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_Children:
+  - {fileID: 4695002271392830}
   m_Father: {fileID: 4225984458406388}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -107,6 +123,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4225984458406388}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4695002271392830
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1599421642255254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4521152972518370}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50090458288034874
@@ -161,18 +190,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17309666, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.04, y: 25.130001}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 26.04, y: 25.130001}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 26.04, y: 25.130001}
+  m_Size: {x: 1.6538067, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &61519093706102366
 BoxCollider2D:
@@ -180,7 +209,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781784955532704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -190,7 +219,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2.5, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -211,18 +240,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.36}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2.5, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 1.2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &114262790637995732
 MonoBehaviour:
@@ -238,7 +267,8 @@ MonoBehaviour:
   walkspeed: 7
   jumpspeed: 7
   isInAir: 1
-  isFocused: 1
+  isCarryingMermaid: 0
+  safePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114408743522244834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,6 +284,7 @@ MonoBehaviour:
   isBeingCarried: 0
   canDropoffKid: 0
   carryingKid: 0
+  isFocused: 0
 --- !u!114 &114444760948775008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +299,11 @@ MonoBehaviour:
   characterType: 0
   mermaid: {fileID: 0}
   kid: {fileID: 0}
+  someoneCarried: 0
+  bubble: {fileID: 1251177488563238, guid: 204a2f820737f2a4bb2055785f1cfa02, type: 2}
+  bubbleSpawner: {fileID: 0}
+  isSpawningBubble: 0
+  bubbleSpawningInterval: 1
 --- !u!114 &114553524231662040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInWater: 0
   isCarryingKid: 0
-  isFocused: 0
   movespeed: 5
 --- !u!114 &114989163925731304
 MonoBehaviour:
@@ -298,6 +333,7 @@ MonoBehaviour:
   isBeingCarried: 0
   canDropoffMermaid: 0
   carryingMermaid: 0
+  isFocused: 1
 --- !u!212 &212127411238821000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -333,7 +369,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 133810d192e9ebc408e4c2e797671f9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2903f0aa89dd444499802329418b6964, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -379,7 +415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3a5b0d997ea0baf4286c12f0b142521d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf3edae75ac68db44a115e2b18dbec4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

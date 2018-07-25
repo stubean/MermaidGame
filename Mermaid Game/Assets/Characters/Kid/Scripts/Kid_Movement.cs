@@ -11,6 +11,7 @@ public class Kid_Movement : MonoBehaviour {
     /// 
 
     Kid_Controller kid_Controller;
+    SpriteRenderer spriteRenderer;
 
     public float walkspeed = 5f;
     public float jumpspeed = 1f;
@@ -21,6 +22,7 @@ public class Kid_Movement : MonoBehaviour {
 
     float moveHorizontal;
     float moveVertical;
+    bool isFacingRight = true;
 
     public Vector3 safePosition;//the location where the kid was last safe
     float drowningTime = 0.25f;
@@ -31,6 +33,7 @@ public class Kid_Movement : MonoBehaviour {
     private void Awake()
     {
         kid_Controller = GetComponent<Kid_Controller>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Use this for initialization
@@ -69,8 +72,19 @@ public class Kid_Movement : MonoBehaviour {
             moveVertical = 0f;
         }
 
+        if (moveHorizontal < -0.01)
+        {
+            spriteRenderer.flipX = true;
+            isFacingRight = true;
+        }
+        else if (moveHorizontal > 0.01)
+        {
+            spriteRenderer.flipX = false;
+            isFacingRight = false;
+        }
 
-       // if (isInAir == false)
+
+        // if (isInAir == false)
         {
             rigidbody2d.velocity = new Vector2(moveHorizontal * walkspeed, rigidbody2d.velocity.y);
         }

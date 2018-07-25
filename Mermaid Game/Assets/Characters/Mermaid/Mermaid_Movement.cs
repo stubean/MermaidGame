@@ -9,7 +9,8 @@ public class Mermaid_Movement : MonoBehaviour {
     /// </summary>
     /// 
 
-    Mermaid_Controller mermaid_Controller;
+    public Mermaid_Controller mermaid_Controller;
+    SpriteRenderer spriteRenderer;
 
     public bool isInWater = false;
     public bool isCarryingKid = false;
@@ -18,11 +19,13 @@ public class Mermaid_Movement : MonoBehaviour {
     private Rigidbody2D rigidbody2d;
 
     float moveHorizontal, moveVertical;
+    bool isFacingRight = true;
 
 
     private void Awake()
     {
         mermaid_Controller = GetComponent<Mermaid_Controller>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Use this for initialization
@@ -49,6 +52,16 @@ public class Mermaid_Movement : MonoBehaviour {
             moveVertical = 0f;
         }
 
+        if(moveHorizontal < -0.01)
+        {
+            spriteRenderer.flipX = true;
+            isFacingRight = true;
+        }
+        else if (moveHorizontal > 0.01)
+        {
+            spriteRenderer.flipX = false;
+            isFacingRight = false;
+        }
 
         if (isInWater)
         {
@@ -78,8 +91,21 @@ public class Mermaid_Movement : MonoBehaviour {
     {
         if (collision.tag == "Water") {
             isInWater = true;
+            mermaid_Controller.isInWater = true;
+            mermaid_Controller.waterLevel_Controller = collision.GetComponent<WaterLevel_Controller>();
             rigidbody2d.gravityScale = 0.5f;
         } 
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Water")
+        {
+            isInWater = true;
+            mermaid_Controller.isInWater = true;
+            mermaid_Controller.waterLevel_Controller = collision.GetComponent<WaterLevel_Controller>();
+            rigidbody2d.gravityScale = 0.5f;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -87,6 +113,8 @@ public class Mermaid_Movement : MonoBehaviour {
         if (collision.tag == "Water")
         {
             isInWater = false;
+            mermaid_Controller.isInWater = false;
+            mermaid_Controller.waterLevel_Controller = null;
             rigidbody2d.gravityScale = 1f;
         }
     }
