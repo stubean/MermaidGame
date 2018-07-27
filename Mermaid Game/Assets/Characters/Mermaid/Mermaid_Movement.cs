@@ -16,6 +16,9 @@ public class Mermaid_Movement : MonoBehaviour {
     public bool isCarryingKid = false;
     public float movespeed = 5f;
 
+    public bool isSwimming = false;
+    Animator animator;
+
     private Rigidbody2D rigidbody2d;
 
     float moveHorizontal, moveVertical;
@@ -26,6 +29,7 @@ public class Mermaid_Movement : MonoBehaviour {
     {
         mermaid_Controller = GetComponent<Mermaid_Controller>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Use this for initialization
@@ -66,6 +70,19 @@ public class Mermaid_Movement : MonoBehaviour {
         if (isInWater)
         {
             rigidbody2d.velocity = new Vector2(moveHorizontal * movespeed, moveVertical * movespeed);
+
+            if (rigidbody2d.velocity.x != 0f || rigidbody2d.velocity.y != 0f)
+            {
+                isSwimming = true;
+                animator.SetBool("isSwimming", true);
+            }
+            else
+            {
+                isSwimming = false;
+                animator.SetBool("isSwimming", false);
+            }
+        } else {
+            isSwimming = false;
         }
     }
 

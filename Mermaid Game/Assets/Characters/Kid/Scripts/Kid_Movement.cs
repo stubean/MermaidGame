@@ -19,6 +19,8 @@ public class Kid_Movement : MonoBehaviour {
     public bool isInAir = true;
     public bool isCarryingMermaid = false;
 
+    public bool isWalking = false;
+
     private Rigidbody2D rigidbody2d;
 
     float moveHorizontal;
@@ -95,6 +97,25 @@ public class Kid_Movement : MonoBehaviour {
         {
             savingPosition = true;
             Invoke("SaveKidsPosition", savePositionTime);
+        }
+
+        if (!isInAir)
+        {
+
+            if (rigidbody2d.velocity.x != 0f)
+            {
+                isWalking = true;
+                animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                isWalking = false;
+                animator.SetBool("isWalking", false);
+            }
+        }
+        else {
+            isWalking = false;
+            animator.SetBool("isWalking", false);
         }
     }
 
