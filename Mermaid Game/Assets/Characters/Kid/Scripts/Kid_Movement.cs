@@ -124,6 +124,7 @@ public class Kid_Movement : MonoBehaviour {
         if (collision.gameObject.tag == "Ground")
         {
             isInAir = false;
+            animator.SetBool("isInAir", false);
             if (collision.gameObject.name == "Bubble(Clone)")
                 onBubble = true;
             else
@@ -138,6 +139,7 @@ public class Kid_Movement : MonoBehaviour {
         if (collision.gameObject.tag == "Ground")
         {
             isInAir = false;
+            animator.SetBool("isInAir", false);
             if (collision.gameObject.name == "Bubble(Clone)")
                 onBubble = true;
             else
@@ -152,6 +154,7 @@ public class Kid_Movement : MonoBehaviour {
         if (collision.gameObject.tag == "Ground")
         {
             isInAir = true;
+            animator.SetBool("isInAir", true);
             onBubble = false;
         }
 
