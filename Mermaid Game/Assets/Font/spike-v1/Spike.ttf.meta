@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e1ee5138db238024e9f2f7910caef83e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Spike
+  fontNames:
+  - Spike
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0511d9bb14881d248b19a6cb5a7d7e85, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
