@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: b8145b7c431ee0e43bb89c89c3820648
+guid: e8c432b0f7a5582489721541c278e4eb
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Kids Walking_0
-    21300002: Kids Walking_1
-    21300004: Kids Walking_2
-    21300006: Kids Walking_3
+    21300000: kid_jump_0
+    21300002: kid_jump_1
+    21300004: kid_jump_2
+    21300006: kid_jump_3
+    21300008: kid_jump_4
+    21300010: kid_jump_5
+    21300012: kid_jump_6
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -35,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -49,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,7 +81,18 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kids Walking_0
+      name: kid_jump_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1
+        x: 12
+        y: 0
         width: 48
-        height: 63
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +116,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18465abd0db989e45813907a18767ac9
+      spriteID: da5717dd6ec92404eb23d62462e0b936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kids Walking_1
+      name: kid_jump_1
       rect:
         serializedVersion: 2
-        x: 74
-        y: 1
+        x: 77
+        y: 0
         width: 45
-        height: 63
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb04ca39a24f5e0458bef023c6b99a28
+      spriteID: 19bd0081b68d04841b3c15db58c80cdf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kids Walking_2
+      name: kid_jump_2
       rect:
         serializedVersion: 2
-        x: 137
-        y: 1
+        x: 140
+        y: 21
         width: 48
-        height: 63
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,17 +156,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b5e08420d22c74684dffe243f8c956
+      spriteID: 4ddd8756823a097458b7b7ce0d57c8f0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kids Walking_3
+      name: kid_jump_3
       rect:
         serializedVersion: 2
-        x: 202
-        y: 2
+        x: 204
+        y: 36
         width: 45
         height: 62
       alignment: 0
@@ -162,7 +176,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7449c71a4b4581b4092170c5edd33a8a
+      spriteID: 1104851fb881ab242bf00e39ef55f922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_jump_4
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 47
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d460b822e5d066449d054915f8b631c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_jump_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9aea0af4913f8c47a8587656306c9aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_jump_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c302fc3d8ed31564f90febbdb32be9ea
       vertices: []
       indices: 
       edges: []
@@ -170,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6643d25006ff31f42b5bf8dcaa137bf8
+    spriteID: ddec77c6d19399b4e91aa618d6a60a7a
     vertices: []
     indices: 
     edges: []

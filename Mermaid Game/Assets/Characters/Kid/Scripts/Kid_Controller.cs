@@ -23,6 +23,7 @@ public class Kid_Controller : MonoBehaviour {
     public bool canDropoffMermaid = false;
     public bool carryingMermaid = false;
     public bool isFocused = true;//start at kid on default
+    public bool isBusy = false;//the kid is doing something and we are waiting for it to finish
 
 
     bool activateButtonHit = false;
@@ -104,6 +105,23 @@ public class Kid_Controller : MonoBehaviour {
         mySpriteRenderer.color = new Color(1, 1, 1, 1);
         myBoxCollider2D.enabled = true;
         myRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    public void HideKid()
+    {
+        isFocused = false;
+        mySpriteRenderer.color = new Color(1, 1, 1, 0);
+        myBoxCollider2D.enabled = false;
+        myRigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+    public void UnHideKid()
+    {
+        isFocused = true;
+        mySpriteRenderer.color = new Color(1, 1, 1, 1);
+        myBoxCollider2D.enabled = true;
+        myRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)//if the kid is in the switchTrigger

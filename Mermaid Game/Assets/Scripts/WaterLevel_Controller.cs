@@ -6,7 +6,7 @@ public class WaterLevel_Controller : MonoBehaviour {
 
    public int maxWaterUnitCount;//the maximum amount the water has
     public int minWaterUnitCount;//the minimum amount the water will allow
-   
+    public int StartWaterAmount;//What the water level should start out at
     public float waterUnitMovementValue;//how many units of water is considered
     public float waterChangeRate;//how fast we move the water
     public int currentWaterCount;
@@ -15,6 +15,7 @@ public class WaterLevel_Controller : MonoBehaviour {
     public void Awake()
     {
         currentWaterCount = maxWaterUnitCount;
+        RemoveWater(maxWaterUnitCount - StartWaterAmount);
     }
 
     public void RemoveWater(int amount)
@@ -34,7 +35,9 @@ public class WaterLevel_Controller : MonoBehaviour {
 
     public void AddWater(int amount)
     {
-        if (currentWaterCount - amount < minWaterUnitCount)//if the adding amount will go past the max. set the amount to be what's left to remove
+        if (currentWaterCount == maxWaterUnitCount)//have reached the max amount, don't do anything more
+            return;
+        if (currentWaterCount + amount >= maxWaterUnitCount)//if the adding amount will go past the max. set the amount to be what's left to remove
         {
             amount = maxWaterUnitCount - currentWaterCount;// set the amount to be what's left to remove
             currentWaterCount = maxWaterUnitCount;

@@ -166,8 +166,7 @@ public class Mermaid_Controller : MonoBehaviour {
         {
             currentBubble = bubbleList[i].GetComponent<Bubble>();
             currentWaterLevel_Controller = currentBubble.waterLevel_Controller;
-            currentWaterLevel_Controller.AddWater(1);
-            Destroy(currentBubble.gameObject);
+            currentBubble.DestroyBubble();//will add water back into water body
         }
         bubbleList.Clear();
         currentBubbleCount = 0;
