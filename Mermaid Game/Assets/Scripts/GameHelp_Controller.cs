@@ -8,7 +8,6 @@ public class GameHelp_Controller : MonoBehaviour {
     public enum HelpType { EKey, GKey, FKey };
 
     Text fKey, eKey, gKey;
-    float ShowTime = 4f;
 
     private void Awake()
     {
@@ -26,20 +25,22 @@ public class GameHelp_Controller : MonoBehaviour {
                 eKey.color = new Color(1, 1, 1, 1);
                 gKey.color = new Color(1, 1, 1, 0);
                 fKey.color = new Color(1, 1, 1, 0);
+                Invoke("HideHelp", 4);
                 return;
             case HelpType.GKey:
                 eKey.color = new Color(1, 1, 1, 0);
                 gKey.color = new Color(1, 1, 1, 1);
                 fKey.color = new Color(1, 1, 1, 0);
+                Invoke("HideHelp", 4);
                 return;
             case HelpType.FKey:
                 eKey.color = new Color(1, 1, 1, 0);
                 gKey.color = new Color(1, 1, 1, 0);
                 fKey.color = new Color(1, 1, 1, 1);
+                Invoke("HideHelp", 4);
                 return;
         }
-
-        Invoke("HideHelp", ShowTime);
+       
     }
 
     void HideHelp()
