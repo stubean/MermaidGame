@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Debug_Controller : MonoBehaviour {
 
+
+    private void Awake()
+    {
+        Cursor.visible = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -12,5 +18,11 @@ public class Debug_Controller : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
 }

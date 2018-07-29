@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114262790637995732}
   - component: {fileID: 61519093706102366}
   - component: {fileID: 114989163925731304}
+  - component: {fileID: 95153690547595506}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Kid
@@ -76,6 +77,7 @@ GameObject:
   - component: {fileID: 50569575383010380}
   - component: {fileID: 114553524231662040}
   - component: {fileID: 114408743522244834}
+  - component: {fileID: 95080745231311916}
   m_Layer: 0
   m_Name: Mermaid
   m_TagString: Mermaid
@@ -90,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727491531019856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.9, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4582826839339014}
@@ -104,27 +106,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853685387010178}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.96, y: -5.06, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 23.35, y: -13.3, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children:
   - {fileID: 4695002271392830}
   m_Father: {fileID: 4225984458406388}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4582826839339014
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781784955532704}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.61, y: -0.92, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 12.4, y: -3.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4225984458406388}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4695002271392830
 Transform:
   m_ObjectHideFlags: 1
@@ -132,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599421642255254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4521152972518370}
@@ -240,7 +242,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.36}
+  m_Offset: {x: 0.03864193, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,8 +253,44 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 2.5}
+  m_Size: {x: 1.4590149, y: 2}
   m_EdgeRadius: 0
+--- !u!95 &95080745231311916
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853685387010178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cf16c95612843a4db9ea5bd60aa0a0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95153690547595506
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781784955532704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8213305042ea84048916c7fcdf01969e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114262790637995732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +306,7 @@ MonoBehaviour:
   jumpspeed: 7
   isInAir: 1
   isCarryingMermaid: 0
+  isWalking: 0
   safePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114408743522244834
 MonoBehaviour:
@@ -280,11 +319,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962fd5157c5a8e44fb96fadc3876213c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterLevel_Controller: {fileID: 0}
+  bubble: {fileID: 1251177488563238, guid: 204a2f820737f2a4bb2055785f1cfa02, type: 2}
+  maxBubbleCount: 5
+  currentBubbleCount: 0
+  bubbleList: []
+  bubbleSpawner: {fileID: 0}
   canPickupKid: 0
   isBeingCarried: 0
   canDropoffKid: 0
   carryingKid: 0
   isFocused: 0
+  isInWater: 0
 --- !u!114 &114444760948775008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,10 +346,6 @@ MonoBehaviour:
   mermaid: {fileID: 0}
   kid: {fileID: 0}
   someoneCarried: 0
-  bubble: {fileID: 1251177488563238, guid: 204a2f820737f2a4bb2055785f1cfa02, type: 2}
-  bubbleSpawner: {fileID: 0}
-  isSpawningBubble: 0
-  bubbleSpawningInterval: 1
 --- !u!114 &114553524231662040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,9 +357,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bce0effa4da924e9cb725d5528dcb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mermaid_Controller: {fileID: 0}
   isInWater: 0
   isCarryingKid: 0
   movespeed: 5
+  isSwimming: 0
 --- !u!114 &114989163925731304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,6 +378,7 @@ MonoBehaviour:
   canDropoffMermaid: 0
   carryingMermaid: 0
   isFocused: 1
+  isBusy: 0
 --- !u!212 &212127411238821000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -366,8 +411,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1193344557
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2903f0aa89dd444499802329418b6964, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -412,8 +457,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1193344557
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bf3edae75ac68db44a115e2b18dbec4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

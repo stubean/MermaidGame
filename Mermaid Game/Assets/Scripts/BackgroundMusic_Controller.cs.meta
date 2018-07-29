@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 24fd5cba676c2124c9fd797789823cbd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ambient: {fileID: 8300000, guid: 3d454c5dbc2d92941a6f15039d447f1e, type: 3}
+  - chimes: {fileID: 8300000, guid: 660e81d092af8ac4d8fc631fdb384493, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -26,7 +26,7 @@ public class Characters_Parent : MonoBehaviour
 
 
         // set character type to kid at start
-        characterType = CharactersType.Kid;
+        //characterType = CharactersType.Kid;
     }
 
     // Update is called once per frame

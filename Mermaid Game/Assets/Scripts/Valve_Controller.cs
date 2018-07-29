@@ -10,6 +10,7 @@ public class Valve_Controller : MonoBehaviour {
     public Transform turnPosition;
     Vector3 startPosition;
     Animator animator;
+    AudioSource audioSource;
 
     public int AmountOfWaterToAdd = 10;
     float animationTime = 1.17f;
@@ -27,6 +28,7 @@ public class Valve_Controller : MonoBehaviour {
         WaterDropPosition = transform.Find("PipeWaterDropoff");
         startPosition = transform.position;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -45,6 +47,7 @@ public class Valve_Controller : MonoBehaviour {
     {
         kid_Controller.isBusy = true;
         activateSprite.color = new Color(1, 1, 1, 0);
+        audioSource.Play();
         transform.position = turnPosition.position;
         animator.SetTrigger("TurnValve");
         kid_Controller.HideKid();

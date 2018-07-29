@@ -15,6 +15,7 @@ public class Mermaid_Controller : MonoBehaviour {
     SwitchTrigger currentSwitchTrigger;
     SpriteRenderer mySpriteRenderer;
     BoxCollider2D myBoxCollider2D;
+    Animator animator;
     Rigidbody2D myRigidbody2D;
     public GameObject bubble;
     public int maxBubbleCount = 5;
@@ -45,7 +46,8 @@ public class Mermaid_Controller : MonoBehaviour {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
-        
+        animator = GetComponent<Animator>();
+
     }
 
     // Use this for initialization
@@ -81,6 +83,7 @@ public class Mermaid_Controller : MonoBehaviour {
                 mermaid_Movement.SetCarryingKid(true);
                 kid_Controller.Pickup();
                 characters_Parent.someoneCarried = true;
+                animator.SetBool("isCarryingKid", true);
             }
             else if (carryingKid && canDropoffKid)//if the user is tring to drop off the kid
             {
@@ -88,6 +91,7 @@ public class Mermaid_Controller : MonoBehaviour {
                 mermaid_Movement.SetCarryingKid(false);
                 kid_Controller.DropOff(currentSwitchTrigger);
                 characters_Parent.someoneCarried = false;
+                animator.SetBool("isCarryingKid", false);
             }
 
 

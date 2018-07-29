@@ -16,6 +16,7 @@ public class Kid_Controller : MonoBehaviour {
     SpriteRenderer mySpriteRenderer;
     BoxCollider2D myBoxCollider2D;
     Rigidbody2D myRigidbody2D;
+    Animator animator;
 
     //Statuses of the kid
     public bool canPickupMermaid = false;
@@ -34,6 +35,7 @@ public class Kid_Controller : MonoBehaviour {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Use this for initialization
@@ -64,6 +66,7 @@ public class Kid_Controller : MonoBehaviour {
                 kid_Movement.SetCarryingMermaid(true);
                 mermaid_Controller.Pickup();
                 characters_Parent.someoneCarried = true;
+                animator.SetBool("isCarryingMermaid", true);
             }
             else if (carryingMermaid && canDropoffMermaid)
             {
@@ -71,6 +74,7 @@ public class Kid_Controller : MonoBehaviour {
                 kid_Movement.SetCarryingMermaid(false);
                 mermaid_Controller.DropOff(currentSwitchTrigger);
                 characters_Parent.someoneCarried = false;
+                animator.SetBool("isCarryingMermaid", false);
             }
 
 
