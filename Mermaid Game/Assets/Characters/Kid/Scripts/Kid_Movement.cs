@@ -56,14 +56,6 @@ public class Kid_Movement : MonoBehaviour {
     // Get Axis input, then apply force to the kid
     void Movement()
     {
-
-        // If player press space, jump up
-        if (kid_Controller.isFocused && Input.GetKeyDown(KeyCode.Space) && isInAir == false)
-        {
-            rigidbody2d.AddForce(new Vector2(0, jumpspeed), ForceMode2D.Impulse);
-            isInAir = true;
-        }
-
         // get player input
         if (kid_Controller.isFocused)
         {
@@ -74,6 +66,13 @@ public class Kid_Movement : MonoBehaviour {
         {
             moveHorizontal = 0f;
             moveVertical = 0f;
+        }
+
+        // If player press space, jump up
+        if (kid_Controller.isFocused && moveVertical > 0.1f && isInAir == false)
+        {
+            rigidbody2d.AddForce(new Vector2(0, jumpspeed), ForceMode2D.Impulse);
+            isInAir = true;
         }
 
         if (moveHorizontal < -0.01)
